@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.utils.html import escape
 
 
 def hello(request):
@@ -6,8 +7,9 @@ def hello(request):
 
 
 def eva(request):
-    return HttpResponse("Hello, Eva!")
+    return HttpResponse("Hello, <span style='color:red'>Eva<span/> !")
 
 
 def name(request, data):
-    return HttpResponse(f"Hello, {data}")
+    escaped_data = escape(data)
+    return HttpResponse(f"Hello, {escaped_data}")
