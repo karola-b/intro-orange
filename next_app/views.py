@@ -4,6 +4,9 @@ from django.shortcuts import render, HttpResponse
 from django.utils.html import escape
 
 
+class Cow:
+    def __init__(self, name):
+        self.name = name
 def hello(request):
     return HttpResponse("Hello, world!")
 
@@ -46,5 +49,30 @@ def is_it_new_year(request):
         'is_it_new_year.html',
         context={
             'is_new_year': is_new_year
+        }
+    )
+
+
+def fruits(request):
+    fruits_list = [
+        'jabłko',
+        'banan',
+        'winogrona',
+        'mandarynki'
+    ]
+
+    person = {
+        "name": "Jan",
+        "surname": "Kowalski",
+        "age": 15
+    }
+    cow = Cow(name="Mućka")
+    return render(
+        request,
+        'fruits.html',
+        context={
+            'fruits': fruits_list,
+            'person': person,
+            'cow': cow,
         }
     )
