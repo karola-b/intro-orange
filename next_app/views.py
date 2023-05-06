@@ -67,6 +67,8 @@ def fruits(request):
         "age": 15
     }
     cow = Cow(name="Mućka")
+
+
     return render(
         request,
         'fruits.html',
