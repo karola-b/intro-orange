@@ -4,21 +4,21 @@ from django.shortcuts import render
 def first(request):
     return render(
         request,
-        'first.html',
+        'links/first.html',
     )
 
 
 def second(request):
     return render(
         request,
-        'second.html',
+        'links/second.html',
     )
 
 
 def third(request, param):
     return render(
         request,
-        'third.html',
+        'links/third.html',
         context={
             'param': param
         }
