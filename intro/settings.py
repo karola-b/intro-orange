@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
     # local apps
     'hello.apps.HelloConfig',
-    'next_app.apps.NextAppConfig'
+    'next_app.apps.NextAppConfig',
+    'links.apps.LinksConfig',
 ]
 
 MIDDLEWARE = [

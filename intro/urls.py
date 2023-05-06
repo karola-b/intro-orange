@@ -26,5 +26,7 @@ urlpatterns = [
     path('hellogeorge/', views.hello_george),
     path('hi/', views.hi),
 
-    path('next/', include('next_app.urls'))
+    path('next/', include('next_app.urls')),
+
+    path('links/', include('links.urls'))
 ]

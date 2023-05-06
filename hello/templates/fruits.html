@@ -9,6 +9,7 @@
     {% for fruit in fruits %}
         <li> {{ forloop.counter }} - {{ fruit }} </li>
     {% endfor %}
+    </ul>
 
         <!-- Wyszukiwanie (lookup) po kluczu -->
         <p> {{ person.age }} </p>
@@ -18,6 +19,12 @@
 
         <!-- Wyszukiwanie (lookup) po indeksie -->
         <p> {{ fruits.1 }} </p>
-    </ul>
+
+
+        <!-- filtry dtl -->
+        <p> {{ fruits | length }}</p>
+        <p> {{ fruits | join:", " }}</p>
+        <p> {{ fruits | upper }}</p>
+        <p> {{ fruits | title }}</p>
 </body>
 </html>
