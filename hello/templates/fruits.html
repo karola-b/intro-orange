@@ -9,9 +9,15 @@
     {% for fruit in fruits %}
         <li> {{ forloop.counter }} - {{ fruit }} </li>
     {% endfor %}
-        <p> {{ fruits.1 }} </p>
+
+        <!-- Wyszukiwanie (lookup) po kluczu -->
         <p> {{ person.age }} </p>
+
+        <!-- Wyszukiwanie (lookup) po nazwie atrybutu/metody -->
         <p> {{ cow.name }} </p>
+
+        <!-- Wyszukiwanie (lookup) po indeksie -->
+        <p> {{ fruits.1 }} </p>
     </ul>
 </body>
 </html>
