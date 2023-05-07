@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Szczegóły zadania o numerze {{ task.id }}</h2>
+<p>Nazwa: {{ task.name }}</p>
+<a href="{% url 'crud_app:task_list_view' %}"><button>Powrót do listy</button></a>
+</body>
+</html>
