@@ -11,5 +11,7 @@ urlpatterns = [
     path('list/', views.task_list_view, name='task_list_view'),
     path('<int:pk>/', views.task_detail_view, name='task_detail_view'),
     # U
-    path('update/<int:pk>/', views.task_update_view, name='task_update_view')
+    path('update/<int:pk>/', views.task_update_view, name='task_update_view'),
+    # D
+    path('delete/<int:pk>/', views.task_delete_view, name='task_delete_view'),
 ]
