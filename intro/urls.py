@@ -46,4 +46,6 @@ urlpatterns = [
 
     path('relations/', include('relations_app.urls')),
 
+    path('message/', include('message_app.urls'))
+
 ]
