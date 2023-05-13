@@ -25,27 +25,17 @@ urlpatterns = [
     path('hello/', views.hello),
     path('hellogeorge/', views.hello_george),
     path('hi/', views.hi),
-
     path('next/', include('next_app.urls')),
-
     path('links/', include('links.urls')),
-
     path('inheritance/', include('inheritance.urls')),
-
     path('form/', include('form_app.urls')),
-
     path('form2/', include('form_app2.urls')),
-
     path('form3/', include('form_app3.urls')),
-
     path('form4/', include('form_app4.urls')),
-
     path('form5/', include('form_app5.urls')),
-
     path('crud/', include('crud_app.urls')),
-
     path('relations/', include('relations_app.urls')),
-
-    path('message/', include('message_app.urls'))
+    path('message/', include('message_app.urls')),
+    path('view/', include('view_app.urls'))
 
 ]

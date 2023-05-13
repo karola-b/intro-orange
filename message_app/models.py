@@ -8,8 +8,8 @@ class Message(models.Model):
     )
 
     email = models.EmailField()
-    category = models.CharField(max_length=100)
-    subject = models.CharField(max_length=100, choices=CHOICES)
+    category = models.CharField(max_length=100, choices=CHOICES)
+    subject = models.CharField(max_length=100)
     body = models.TextField()
     fav_date = models.DateField()
     fav_time = models.TimeField()

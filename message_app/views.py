@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 from message_app.models import Message
-from message_app.forms import MessageForm
+from message_app.forms import MessageForm, MessageModelForm
 
 
 def contact1(request):
@@ -66,11 +66,40 @@ def contact2(request):
             )
 
     elif request.method == "GET":
-        form = MessageForm() # unbound form (postać niezwiązana)
+        form = MessageForm()  # unbound form (postać niezwiązana)
 
         return render(
             request,
             'message_app/contact2.html',
+            context={
+                'form': form,
+            }
+        )
+
+
+def contact3(request):
+    if request.method == 'POST':
+        form = MessageModelForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+
+            return redirect('message_app:contact3')
+        else:
+            return render(
+                request,
+                'message_app/contact3.html',
+                context={
+                    'form': form,
+                }
+            )
+
+    if request.method == 'GET':
+        form = MessageModelForm()
+
+        return render(
+            request,
+            'message_app/contact3.html',
             context={
                 'form': form,
             }
