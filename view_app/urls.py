@@ -6,4 +6,5 @@ app_name = 'view_app'
 
 urlpatterns = [
     path('hello/', views.hello, name='hello'),
+    path('hello2/', views.hello, name='hello2'),
 ]
