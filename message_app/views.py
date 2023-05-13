@@ -104,3 +104,5 @@ def contact3(request):
                 'form': form,
             }
         )
+
+# dalsza automatyzacja jest możliwa z django.crispy.view
