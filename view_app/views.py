@@ -4,6 +4,7 @@ from django.shortcuts import render, HttpResponse
 from django import views
 from django.views.generic import TemplateView
 
+
 def hello(request):
     return HttpResponse("Hello, world!")
 

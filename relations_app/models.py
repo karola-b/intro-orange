@@ -26,3 +26,4 @@ class Actor(models.Model):
 class Movie(models.Model):
     title = models.CharField(max_length=100)
     actors = models.ManyToManyField('Actor')
+

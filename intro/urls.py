@@ -38,6 +38,7 @@ urlpatterns = [
     path('message/', include('message_app.urls')),
     path('view/', include('view_app.urls')),
     path('state/', include('state_app.urls')),
-    path('auth/', include('auth_app.urls'))
+    path('auth/', include('auth_app.urls')),
+    path('dogs/', include('api_app.urls')),
 
 ]
